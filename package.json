@@ -1,0 +1,21 @@
+{
+  "name": "ic-xentity",
+  "version": "1.0.0",
+  "description": "replace xml entity to utf8 characters",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [
+    "xml",
+    "json"
+  ],
+  "author": "Imesh Chamara <imesh1chamara@gmail.com> (https://ic-tech.now.sh)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IC-Tech/ic-xentity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IC-Tech/ic-xentity/issues"
+  },
+  "homepage": "https://github.com/IC-Tech/ic-xentity"
+}
