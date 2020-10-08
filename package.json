@@ -1,5 +1,5 @@
 {
-  "name": "ic-xentity",
+  "name": "@ic-tech/ic-xentity",
   "version": "1.0.0",
   "description": "replace xml entity to utf8 characters",
   "main": "src/index.js",
@@ -17,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/IC-Tech/ic-xentity/issues"
   },
-  "homepage": "https://github.com/IC-Tech/ic-xentity"
+  "homepage": "https://github.com/IC-Tech/ic-xentity",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
