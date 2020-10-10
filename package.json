@@ -1,6 +1,6 @@
 {
   "name": "@ic-tech/ic-xentity",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "replace xml entity to utf8 characters",
   "main": "src/index.js",
   "scripts": {},

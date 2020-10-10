@@ -6,11 +6,15 @@ const decode = a => a.replace(/&(#(x)?)?([a-z0-9]+);/gi, (a,en,eh,v) => {
 	if(entities.some(e => e.name == v ? [v = e.char] : 0)) return String.fromCharCode(v)
 	return a
 })
-const encode = (a, entity=false) => Array.from(a).map(a => {
-	var e, char = a.codePointAt(0)
-	if(!entities.some(f => f.char == char ? [e = f] : 0)) return a
-	return `&${entity ? '' : '#x'}${entity ? e.name : e.char.toString(16)};`
-}).join('')
+const encode = (a, op) => {
+	op = op || {}
+	var _entities = !op.mode || op.mode == 'standard' ? entities : [{name: 'lt', char: 60}, {name: 'gt', char: 62}, {name: 'amp', char: 38}, {name: 'apos', char: 39}, {name: 'quot', char: 34}]
+	return Array.from(a).map(a => {
+		var e, char = a.codePointAt(0)
+		if(!_entities.some(f => f.char == char ? [e = f] : 0)) return a
+		return `&${op.entity ? '' : '#x'}${op.entity ? e.name : e.char.toString(16)};`
+	}).join('')
+}
 
 exports.decode = decode
 exports.encode = encode
